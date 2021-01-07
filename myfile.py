@@ -8,5 +8,11 @@
 
 
 #make a bubble function
-Def a_bubble (list)
+def bubble (dnaseq)
+
+    A = 0
+    G = 0
+    C = 0
+    T = 0
+    list []
 
