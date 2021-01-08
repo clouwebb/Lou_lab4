@@ -7,12 +7,29 @@
 #my results should return 20 12 17 21
 
 
-#make a bubble function
-def bubble (dnaseq)
+#make a selecttion sort function
+def selectsort (dnaseq)
 
     A = 0
     G = 0
     C = 0
     T = 0
-    list []
+
+    numseq = []
+    
+    while len (dnaseq) > 0:
+        for letter in dnaseq:
+            if A = A:
+                letter A = 
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    dnaseq = [AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC]
+    selectsort (dnaseq)
+    print (numseq)
 
