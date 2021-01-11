@@ -18,14 +18,14 @@ def selectsort (dnaseq):
     numseq = []
     
     while len (dnaseq) > 0:
-        for letter in dnaseq:
-            if A = A:
+        for numseq in dnaseq:
+            if dnaseq(A) = A:
                 newA = A + 1
-            if G = G:
-                newG = G +1
-            if C = C
+            if dnaseq(G) = G:
+                newG = G + 1
+            if dnaseq(C) = C
                 newC = C + 1
-            if T = T
+            if dnaseq(T) = T
                 newT = T + 1
     else 
         return (newA, newG, newC, newT)
