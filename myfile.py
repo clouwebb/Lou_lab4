@@ -8,7 +8,7 @@
 
 
 #make a selecttion sort function
-def selectsort (dnaseq)
+def selectsort (dnaseq):
 
     A = 0
     G = 0
@@ -20,16 +20,20 @@ def selectsort (dnaseq)
     while len (dnaseq) > 0:
         for letter in dnaseq:
             if A = A:
-                letter A = 
-
-
-
-
-
-
+                newA = A + 1
+            if G = G:
+                newG = G +1
+            if C = C
+                newC = C + 1
+            if T = T
+                newT = T + 1
+    else 
+        return (newA, newG, newC, newT)
 
 if __name__ == "__main__":
     dnaseq = [AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC]
     selectsort (dnaseq)
     print (numseq)
+
+
 
