@@ -10,41 +10,38 @@
 #make a selecttion sort function
 def selectsort (dnaseq):
 
-#this is how i make the letters integers
     A = 0
-    G = 0
+    G = 0 
     C = 0
     T = 0
-
-    numseq = []
     
-    while len (dnaseq) > 0:
+#i did not need the while loop because the string is never going to change in length
 
-        for letter in dnaseq:
-#the code below should be saying that if there is and A in the dna sequence, then i will make a newA that adds up to the old A
+    for letter in dnaseq:
+        
+#if i want to compare the letters, i need to make it a string because and A does not equal the interger A
 
-            if letter = A:
-                newA += 1
-                newA = newA + 1
-            if letter = G:
-                newG += 1
-                newG = newG + 1
-            if letter = C:
-                newC += 1
-                newC = newC + 1
-            if letter = T:
-                newT += 1
-                newT = newT + 1
-                
-#i will return the "new" number and it should be an integer
-            return (newA, newG, newC, newT)
+        if letter == 'A':
+        
+#removed the newA because it becomes conditional to whether i actually see A or not. If i dont then newA becomes useless
 
-#calling
+            A = A + 1
+        if letter == 'G':
+            G = G + 1
+        if letter == 'C':
+            C = C + 1
+        if letter == 'T':
+            T = T + 1
+
+    print (A, G, C, T)
+
+#i am doing it from a string not a list!!!!!
 if __name__ == "__main__":
-    dnaseq = [AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC]
+    dnaseq = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     selectsort (dnaseq)
-    print (numseq)
-    
+    print (dnaseq)
+
+
 #Problem 2
 #Catherine
 #RNA is A, G, C, U
@@ -57,16 +54,40 @@ if __name__ == "__main__":
 
 def transcribe (dnaseq):
 
-
-    while len(dnaseq) > 0:
-        
-        rna = dnaseq[0:]
-        rna = rna.replace ("T", "U")
-
+#same with probelm 1 where i search for the letter T only
+    for letter in dnaseq:
+#this is me saying, if the letter == T, then replace it with U
+        if letter == 'T':
+            T = T.replace ("T", "U")
+#calling the full string, 
 if __name__ == "__main__":
-    dnaseq = ["GATGGAACTTGACTACGTAAATT"]
+    dnaseq = 'GATGGAACTTGACTACGTAAATT'
     transcribe (dnaseq)
     print (dnaseq)
 
 
+#problem 3
+#catherine
+
+#input:
+#AAAACCCGGT
+#output:
+#ACCGGGTTTT
+
+def reverse(dnaseq):
+
+#this is making the computer read the list backwards
+    reverse = dnaseq[::-1]
+#this is individually changing the code by having a "temp"
+    reverse = reverse.replace('A', 't')
+    reverse = reverse.replace('T', 'a')
+    reverse = reverse.replace('G', 'c')
+    reverse = reverse.replace('C', 'g')
+    reverse = reverse.upper() 
+#printing out the new statement
+    print (reverse)
+#calling the function
+if __name__ == "__main__":
+    dnaseq = 'AAAACCCGGT'
+    reverse (dnaseq)
 
