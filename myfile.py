@@ -54,13 +54,18 @@ if __name__ == "__main__":
 
 def transcribe (dnaseq):
 
-#same with probelm 1 where i search for the letter T only
-    for letter in dnaseq:
-#this is me saying, if the letter == T, then replace it with U
-        if letter == 'T':
-            T = T.replace ("T", "U")
-#calling the full string, 
-if __name__ == "__main__":
+#running from the front all the way to the end
+
+    T = dnaseq[0:]
+    
+#this is the newstring replacing the T with U
+
+    dnaseq = T.replace ("T", "U")
+    print (dnaseq)
+    
+#printing the rna strand
+
+if __name__ == '__main__':
     dnaseq = 'GATGGAACTTGACTACGTAAATT'
     transcribe (dnaseq)
     print (dnaseq)
@@ -90,4 +95,5 @@ def reverse(dnaseq):
 if __name__ == "__main__":
     dnaseq = 'AAAACCCGGT'
     reverse (dnaseq)
+
 
