@@ -32,7 +32,7 @@ def selectsort (dnaseq):
             C = C + 1
         if letter == 'T':
             T = T + 1
-
+            
     print (A, G, C, T)
 
 #i am doing it from a string not a list!!!!!
@@ -96,4 +96,30 @@ if __name__ == "__main__":
     dnaseq = 'AAAACCCGGT'
     reverse (dnaseq)
 
+#problem 4
+#Catherine Lou
 
+#input
+#GAGCCTACTAACGGGAT
+#CATCGTAATGACGGCCT
+
+#output
+
+def hamming (dnaseq1, dnaseq2):
+# Return the Hamming distance between dnaseq1 and dnaseq2.
+    hammingdistance = 0
+
+    DNASEQ1 = len(dnaseq1)
+
+    for i in range(DNASEQ1):
+#telling my computer to add one to the "hammingdistance" variable if there is one that doesnt match
+        if dnaseq1[i] != dnaseq2[i]:
+#in addition to adding one, also look past it and scan the next letter
+            hammingdistance += 1
+#return the final hamming distance
+    return hammingdistance
+
+
+if __name__ == "__main__":
+    finaldist = hamming('GAGCCTACTAACGGGAT','CATCGTAATGACGGCCT')
+    print (finaldist)
