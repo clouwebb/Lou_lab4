@@ -82,16 +82,23 @@ if __name__ == '__main__':
 def reverse(dnaseq):
 
 #this is making the computer read the list backwards
+
     reverse = dnaseq[::-1]
+    
 #this is individually changing the code by having a "temp"
+
     reverse = reverse.replace('A', 't')
     reverse = reverse.replace('T', 'a')
     reverse = reverse.replace('G', 'c')
     reverse = reverse.replace('C', 'g')
     reverse = reverse.upper() 
+    
 #printing out the new statement
+
     print (reverse)
+    
 #calling the function
+
 if __name__ == "__main__":
     dnaseq = 'AAAACCCGGT'
     reverse (dnaseq)
@@ -106,20 +113,62 @@ if __name__ == "__main__":
 #output
 
 def hamming (dnaseq1, dnaseq2):
+    
 # Return the Hamming distance between dnaseq1 and dnaseq2.
+
     hammingdistance = 0
 
     DNASEQ1 = len(dnaseq1)
 
     for i in range(DNASEQ1):
+        
 #telling my computer to add one to the "hammingdistance" variable if there is one that doesnt match
+
         if dnaseq1[i] != dnaseq2[i]:
+        
 #in addition to adding one, also look past it and scan the next letter
+
             hammingdistance += 1
+    
 #return the final hamming distance
+
     return hammingdistance
 
 
 if __name__ == "__main__":
     finaldist = hamming('GAGCCTACTAACGGGAT','CATCGTAATGACGGCCT')
     print (finaldist)
+    
+#problem 5
+#Catherine
+
+#input 
+#GATATATGCATATACTT
+#ATAT
+
+#output
+# 2, 4, 10
+
+#Functions
+def findmotif(dnaseq, motif):
+
+ #making the locations a list, so i can just append where i find the motifs
+
+    locations = []
+#i am setting it in length to see if it matches the length
+    motiflen = len(motif)
+    dnaseqlen = len(dnaseq)
+#this is telling my code to search from zero and the differences between dnaseqlen and motiflen
+    for i in range(0, dnaseqlen - motiflen + 1):
+#i am saying here that if there is a match, add it to the end of locations      
+        if dnaseq[i:i + motiflen]:
+            locations.append(i + 1)  
+
+    return locations
+
+if __name__=='__main__':
+    motif = 'ATAT'
+    dnaseq = 'GATATATGCATATACTT'
+    findmotif('GATATATGCATATACTT', 'ATAT')
+    
+    print (findmotif)
