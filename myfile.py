@@ -152,16 +152,12 @@ if __name__ == "__main__":
 #Functions
 def findmotif(dnaseq, motif):
 
- #making the locations a list, so i can just append where i find the motifs
-
     locations = []
-#i am setting it in length to see if it matches the length
     motiflen = len(motif)
     dnaseqlen = len(dnaseq)
-#this is telling my code to search from zero and the differences between dnaseqlen and motiflen
-    for i in range(0, dnaseqlen - motiflen + 1):
-#i am saying here that if there is a match, add it to the end of locations      
-        if dnaseq[i:i + motiflen]:
+
+    for i in range(dnaseqlen):
+        if dnaseq[i:].startswith("ATAT"):
             locations.append(i + 1)  
 
     return locations
@@ -169,6 +165,6 @@ def findmotif(dnaseq, motif):
 if __name__=='__main__':
     motif = 'ATAT'
     dnaseq = 'GATATATGCATATACTT'
-    findmotif('GATATATGCATATACTT', 'ATAT')
+
+    print (findmotif ('GATATATGCATATACTT', 'ATAT'))
     
-    print (findmotif)
